@@ -19,5 +19,15 @@ Bu proje, güncel olarak **.NET 9.0** üzerinde geliştirilmiş ve **ASP.NET Cor
 - **View Component**
 
 ## 📸 Proje Görselleri
-![1 görseli](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/1.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/1.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/2.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/3.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/4.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/5.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/6.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/7.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/8.png)v
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/9.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/10.png)
+![1](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/Portfolio.Web/11.png)
 
