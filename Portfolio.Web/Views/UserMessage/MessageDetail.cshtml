@@ -1,0 +1,19 @@
+﻿@model UserMessage
+@{
+    ViewData["Title"] = "Mesaj Detayı";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Mesaj Detayı</h2>
+
+<div class="card mt-3">
+    <div class="card-header">
+        <h5>@Model.Subject</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Gönderen:</strong> @Model.Name (@Model.Email)</p>
+        <p><strong>Mesaj:</strong></p>
+        <p>@Model.MessageBody</p>
+        <a href="/UserMessage/Index" class="btn btn-secondary mt-3">Geri</a>
+    </div>
+</div>

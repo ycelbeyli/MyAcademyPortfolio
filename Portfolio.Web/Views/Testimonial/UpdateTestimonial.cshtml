@@ -1,0 +1,38 @@
+﻿@model Testimonial
+@{
+    ViewData["Title"] = "Referanslarım Ekle";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post">
+
+    <input type="hidden" asp-for="TestimonialId" />
+
+    <div class="form-group">
+        <label>Ad Soyad</label>
+        <input type="text" class="form-control" asp-for="Name" />
+    </div>
+
+    <div class="form-group">
+        <label>Ünvan</label>
+        <input type="text" class="form-control" asp-for="Title" />
+    </div>
+
+    <div class="form-group">
+        <label>Resim</label>
+        <input type="text" class="form-control" asp-for="ImageUrl" />
+    </div>
+
+    <div class="form-group">
+        <label>Yorum</label>
+        <input type="text" class="form-control" asp-for="Comment" />
+    </div>
+
+    <div class="form-group">
+        <label>Puan</label>
+        <input type="text" class="form-control" asp-for="Review" />
+    </div>
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+</form>

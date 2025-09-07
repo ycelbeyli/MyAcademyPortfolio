@@ -1,0 +1,58 @@
+﻿@model List<UserMessage>
+@{
+    ViewData["Title"] = "Mesaj Yönetimi";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+
+
+    int count = 0;
+}
+
+<h2>Mesaj Yönetimi</h2>
+
+<div class="mb-3">
+    <a href="/UserMessage/Index?filter=all" class="btn btn-primary">Tüm Mesajlar</a>
+    <a href="/UserMessage/Index?filter=read" class="btn btn-success">Okunan Mesajlar</a>
+    <a href="/UserMessage/Index?filter=unread" class="btn btn-warning text-dark">Okunmamış Mesajlar</a>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Gönderici Adı</th>
+            <th>E-Mail</th>
+            <th>Konu</th>
+            <th>İçerik</th>
+            <th>Durum</th>
+            <th>Aksiyon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Subject</td>
+                <td>@item.MessageBody</td>
+                <td>
+                    @if (item.IsRead)
+                    {
+                        <span class="badge bg-success">Okundu</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning text-dark">Okunmadı</span>
+                    }
+                </td>
+                <td>
+                    <a href="/UserMessage/OpenMessage/@item.UserMessageId" class="btn btn-info btn-sm">Aç</a>
+                    <a href="/UserMessage/MarkAsUnread/@item.UserMessageId" class="btn btn-warning btn-sm">Okunmadı Yap</a>
+                    <a href="/UserMessage/DeleteUserMessage/@item.UserMessageId" class="btn btn-danger btn-sm" onclick="return confirm('Mesaj silinecek, emin misiniz?');">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

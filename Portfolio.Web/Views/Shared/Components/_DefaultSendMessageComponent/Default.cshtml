@@ -1,0 +1,60 @@
+﻿<div class="col-lg-7">
+    <form id="contactForm" method="post" asp-action="SendMessage" asp-controller="Default" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-4">
+
+            <div class="col-md-6">
+                <label class="pb-2">Adınız</label>
+                <input type="text" name="Name" class="form-control">
+            </div>
+
+            <div class="col-md-6">
+                <label class="pb-2">Email Adresiniz</label>
+                <input type="email" name="Email" class="form-control">
+            </div>
+
+            <div class="col-md-12">
+                <label class="pb-2">Konu</label>
+                <input type="text" name="Subject" class="form-control">
+            </div>
+
+            <div class="col-md-12">
+                <label class="pb-2">Mesajınız</label>
+                <textarea name="MessageBody" class="form-control" rows="10"></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button class="btn btn-primary" type="submit">Mesajı Gönder</button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+        e.preventDefault(); 
+
+        let name = document.querySelector("[name='Name']").value.trim();
+        let email = document.querySelector("[name='Email']").value.trim();
+        let subject = document.querySelector("[name='Subject']").value.trim();
+        let message = document.querySelector("[name='MessageBody']").value.trim();
+
+        if (name === "" || email === "" || subject === "" || message === "") {
+            Swal.fire({
+                title: "Eksik bilgi!",
+                text: "Lütfen tüm alanları doldurun.",
+                icon: "warning",
+                confirmButtonText: "Tamam"
+            });
+        } else {
+            Swal.fire({
+                title: "Mesajınız başarıyla gönderildi!",
+                icon: "success",
+                confirmButtonText: "Tamam"
+            }).then(() => {
+                e.target.submit();
+            });
+        }
+    });
+</script>
