@@ -19,5 +19,5 @@ Bu proje, güncel olarak **.NET 9.0** üzerinde geliştirilmiş ve **ASP.NET Cor
 - **View Component**
 
 ## 📸 Proje Görselleri
-
+![1 görseli](https://raw.githubusercontent.com/ycelbeyli/MyAcademyPortfolio/master/1.png)
 
